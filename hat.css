@@ -1,0 +1,49 @@
+/* Styles de base pour le fond */
+body {
+    background-color: black;
+    color: #00ff00;
+    text-align: center;
+    margin: 0;
+    padding: 50px 20px 0 20px;
+    overflow: hidden; /* Empêche le défilement en dehors de la page */
+}
+
+/* Conteneur pour les chapeaux */
+#hat-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Empêche les interactions avec les chapeaux */
+}
+
+/* Style de base des chapeaux qui tombent */
+.hat-fall {
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    color: white;
+    animation: fall linear infinite;
+}
+
+/* Différentes couleurs de chapeaux */
+.hat-fall.red-hat {
+    color: #000000; /* Rouge */
+    background-color: #ff0000;
+}
+.hat-fall.black-hat {
+    color: #ffffff; /* Noir */
+    background-color: black;
+    padding: 2px;
+}
+.hat-fall.grey-hat {
+    /*background-color: #2e2e2e; /* Gris */
+}
+
+/* Animation de chute */
+@keyframes fall {
+    to {
+        transform: translateY(100vh); /* Fait tomber les chapeaux jusqu'en bas de la page */
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapeau Scintillant</title>
+    <style>
+        /* Dégradé pour l'effet visuel */
+        body {
+            background-color: black;
+        }
+        .hat-path {
+            fill: url(#grad1);
+            transform-origin: center;
+            animation: blink 2s infinite alternate; /* Animation de scintillement */
+        }
+
+        /* Définition de l'animation de scintillement */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Style pour le texte "TrHackNon" */
+        .text {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            fill: #ff0000; /* Couleur rouge */
+            text-anchor: middle;
+            dominant-baseline: middle; /* Centre verticalement */
+        }
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="200px" height="200px" fill-rule="nonzero">
+        <!-- Dégradé pour le remplissage -->
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"style="stop-color:#ff0000;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:blue;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+
+        <!-- Chapeau SVG -->
+        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(5.12,5.12)">
+                <!-- Appliquer la classe hat-path -->
+                <path class="hat-path" d="M25,2c-9.94141,0 -18,2.6875 -18,6c0,0 0,8.08203 0,17c0,5.08203 5.41797,19.08203 18,22c12.58203,-2.91797 18,-16.91797 18,-22c0,-8.91797 0,-17 0,-17c0,-3.3125 -8.05859,-6 -18,-6zM17,11c3.4375,0 5.19531,3.07422 5.5625,3.4375c0.58594,0.58594 0.58594,1.53906 0,2.12109c-0.58594,0.58594 -1.53906,0.58594 -2.12109,0c-0.41406,-0.41016 -1.75391,-3.55859 -4.44141,-3.55859c-1.38672,0 -3.04687,0.64063 -5,2c1.85547,-3.12109 4.00391,-4 6,-4zM20,18.5c-0.91797,0.90625 -2.35937,1.5 -4,1.5c-1.64062,0 -3.08203,-0.59375 -4,-1.5c0.91797,-0.90625 2.35938,-1.5 4,-1.5c1.64063,0 3.08203,0.59375 4,1.5zM27,43l-2,2l-2,-2v-5h4zM34,34h-7l-2,-2l-2,2h-7l-5,-8l6,5h4l3,-3h2l3,3h4l6,-5zM30,18.5c0.91797,-0.90625 2.35938,-1.5 4,-1.5c1.64063,0 3.08203,0.59375 4,1.5c-0.91797,0.90625 -2.35937,1.5 -4,1.5c-1.64062,0 -3.08203,-0.59375 -4,-1.5zM34,13c-2.6875,0 -4.02734,3.14844 -4.4375,3.5625c-0.58594,0.58594 -1.53906,0.58594 -2.12109,0c-0.58594,-0.58594 -0.58594,-1.53906 0,-2.12109c0.36328,-0.36719 2.12109,-3.44141 5.55859,-3.44141c1.99609,0 4.14453,0.87891 6,4c-1.95312,-1.35937 -3.61328,-2 -5,-2z"></path>
+            </g>
+        </g>
+
+        <!-- Texte "TrHackNon" en dessous -->
+        <text x="50%" y="40" class="text">TrHackNon</text>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+		<msapplication>
+				<tile>
+						<!-- Icônes de différentes tailles pour les tuiles -->
+						<square70x70logo src="/favicon-70x70.png"/>
+						<square150x150logo src="/favicon-150x150.png"/>
+						<square310x310logo src="/favicon-310x310.png"/>
+						<TileColor>#ffffff</TileColor>
+						<!-- Icône pour les affichages de tuiles carrées (1:1) -->
+						<TileImage src="/favicon-310x310.png"/>
+				</tile>
+				<!-- Options supplémentaires pour Windows -->
+				<tile>
+						<TileColor>#000000</TileColor> <!-- Couleur de fond de la tuile -->
+						<Square70x70Logo src="/favicon-70x70.png"/>
+						<Square150x150Logo src="/favicon-150x150.png"/>
+						<Square310x310Logo src="/favicon-310x310.png"/> <!-- Logo pour les tuiles larges -->
+				</tile>
+				<!-- Options pour la tuile de la barre des tâches -->
+				<taskbar>
+						<icon src="/favicon-16x16.png"/>
+						<backgroundColor>#ffffff</backgroundColor>
+				</taskbar>
+		</msapplication>
+</browserconfig>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations CSS</title>
+    <link rel="stylesheet" href="effects.css">
+    <style>
+        /* Ajoutez ici les animations définies ci-dessus */
+    </style>
+</head>
+<body>
+
+    <h1 class="flicker">Bienvenue chez Trhacknon</h1>
+
+    <p class="sparkle">Je développe des sites web avec un style unique.</p>
+
+    <h2 class="flash">Mes Projets</h2>
+
+    <div class="neon">Sécurité, performances et design</div>
+
+    <div class="glitch">Effet Glitch, style hacker !</div>
+<script>
+    const particles = 50;
+    const container = document.getElementById('particles-js');
+
+    for (let i = 0; i < particles; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = `${Math.random() * window.innerWidth}px`;
+        particle.style.top = `${Math.random() * window.innerHeight}px`;
+        particle.style.animationDelay = `${Math.random() * 3}s`;
+        container.appendChild(particle);
+    }
+
+    document.addEventListener('mousemove', (e) => {
+        container.style.left = `${e.clientX - window.innerWidth / 2}px`;
+        container.style.top = `${e.clientY - window.innerHeight / 2}px`;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Police style rétro/technique */
+}
+
+body {
+        background-color: black;
+        color: #00ff00;
+        display: block; /* Pas besoin d'utiliser flex pour le centrage */
+        text-align: center;
+        margin: 0;
+        padding: 50px 20px 0 20px; /* Padding en haut pour éviter que le contenu touche le haut de la page */
+    }
+
+
+/* Conteneur principal */
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #111; /* Légère différence de fond pour encadrer le texte */
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00; /* Ombres lumineuses néon */
+}
+
+/* Titre principal */
+h1 {
+    font-size: 3rem;
+    color: #ff00ff; /* Couleur fluo rose */
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; /* Effet lumineux */
+    animation: glitch 1.5s infinite; /* Animation de glitch */
+}
+
+/* Texte d'alerte */
+.alert-text {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #00ffff; /* Couleur fluo cyan */
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    animation: pulse 2s infinite; /* Animation de pulsation */
+}
+
+/* Liste des chapeaux (Red Hat, Black Hat, Grey Hat) */
+.hats {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.hat {
+    font-size: 1.2rem;
+    color: #ff4500; /* Couleur fluo orange */
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
+    margin: 10px 0;
+    animation: flicker 2s infinite; /* Animation de scintillement */
+}
+
+/* Différenciation des couleurs des chapeaux */
+.red-hat {
+    color: #ff0000; /* Rouge fluo pour Red Hat */
+}
+
+.black-hat {
+    color: #000000; /* Noir pour Black Hat */
+    background-color: #ff4500; /* Fond orange pour contraster */
+    padding: 5px;
+}
+
+.grey-hat {
+    color: #808080; /* Gris pour Grey Hat */
+}
+
+/* Section spéciale avec gros message */
+.warning {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #222; /* Fond légèrement différent pour attirer l'attention */
+    border: 2px solid #ff0000; /* Bordure rouge néon */
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; /* Effet lumineux rouge */
+    animation: pulseBorder 3s infinite; /* Animation de bordure qui pulse */
+}
+
+.warning-text {
+    font-size: 2.5rem;
+    color: #ff0000; /* Rouge vif fluo */
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: glitchText 1.5s infinite; /* Effet de glitch */
+}
+
+.warning-subtext {
+    font-size: 1.8rem;
+    color: #00ff00; /* Vert fluo */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    animation: flicker 2s infinite; /* Effet de scintillement */
+}
+
+/* Animations */
+
+/* Animation de glitch pour les titres */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        transform: translate(5px, -5px);
+    }
+    60% {
+        transform: translate(-5px, -5px);
+    }
+    80% {
+        transform: translate(5px, 5px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Animation de pulsation pour le texte */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    }
+    50% {
+        text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    }
+}
+
+/* Effet scintillant pour le texte */
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* Animation de bordure pulsante */
+@keyframes pulseBorder {
+    0% {
+        box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+    }
+    50% {
+        box-shadow: 0 0 40px #ff0000, 0 0 80px #ff0000;
+    }
+    100% {
+        box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+    }
+}
+
+/* Animation de glitch pour le texte spécial */
+@keyframes glitchText {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-10px, 10px);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    75% {
+        transform: translate(-5px, 5px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+.hat-path {
+    fill: url(#grad1);
+    transform-origin: center;
+    animation: blink 2s infinite alternate; /* Animation de scintillement */
+}
+
+/* Définition de l'animation de scintillement */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style pour le texte "TrHackNon" */
+.text {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    fill: #ff0000; /* Couleur rouge */
+    text-anchor: middle;
+    dominant-baseline: middle; /* Centre verticalement */
+}

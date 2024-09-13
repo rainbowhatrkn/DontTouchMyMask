@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>皮卡丘</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    *::after {
+      box-sizing: border-box;
+    }
+
+    *::before {
+      box-sizing: border-box;
+    }
+
+    #previewWrapper * {
+      transition: all .5s;
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    audio {
+      color: #fff;
+    }
+    #codeWrapper {
+      flex: 1;
+      height: 50%;
+    }
+
+    #codeArea {
+      padding-top: 20px;
+      height: 100%;
+      overflow: hidden;
+    }
+    #previewWrapper {
+      flex: 1;
+      height: 50%;
+    }
+
+    .actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .actions button {
+      margin:10px;
+      padding: 8px;
+      border-radius: 5px;
+      box-shadow: 0 0 2px #666;
+      background: #fff;
+      transition: all .5s;
+    }
+
+    .actions button.active {
+      box-shadow: 0 0 5px 1px blue;
+    } 
+    </style>
+</head>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./vendor/prism/prism.css">
+<style id="styleTag"></style>
+</head>
+<body>
+    <audio src="./media/Thomas Greenberg - Summer's Here.mp3" autoplay loop id="audiojs">
+    </audio>
+  <div id="codeWrapper">
+    <pre id="codeArea"></pre>
+  </div>
+  <div id="previewWrapper">
+   <div id="preview">
+     <div class="wrapper">
+       <div class="lowerlipWrapper">
+        <div class="lowerlip"></div>
+       </div>
+       <div class="nose"></div>
+       <div class="eye left"></div>
+       <div class="eye right"></div>
+       <div class="face left"></div>
+       <div class="face right"></div>
+       <div class="upperlip left"></div>
+       <div class="upperlip right"></div>
+      </div>
+    </div>   
+  </div>
+  <div class="actions">
+    <button data-speed="slow">慢</button>
+    <button data-speed="medium" class="active">正常</button>
+    <button data-speed="fast">快</button>
+  </div>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./vendor/prism/prism.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('audiojs');
+                audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        }
+        audioAutoPlay();
+    });
+
+      if (/i(Phone|P(o|a)d)/.test(navigator.userAgent)) {
+        $(document).one('touchstart',
+          function(e) {
+              // $('#audiojs').get(0).touchstart = true;
+              $('#audiojs').get(0).play();
+          })
+      }else if(navigator.userAgent.indexOf("Safari") > -1) {
+        $(document).one('click',
+          function(e) {
+              // $('#audiojs').get(0).onclick = true;
+              $('#audiojs').get(0).play();
+          })       
+      }
+  </script>
+</body>
+</html>

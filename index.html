@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ne touches pas à mon mask</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Découvrez le véritable rôle des hackers à travers les chapeaux Red Hat, Black Hat, et Grey Hat. Protégez notre identité contre les imposteurs qui s'approprient l'image d'Anonymous.">
+    <meta name="keywords" content="hacking, red hat, black hat, grey hat, cybersécurité, Anonymous, sécurité informatique, hackers, éthique du hacking">
+    <meta name="author" content="trhacknon">
+    <meta name="robots" content="index, follow">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="google" content="notranslate">
+
+    <!-- Open Graph Tags pour les réseaux sociaux -->
+    <meta property="og:title" content="Ne touches pas à mon mask">
+    <meta property="og:description" content="Découvrez le véritable rôle des hackers à travers les chapeaux Red Hat, Black Hat, et Grey Hat. Protégez notre identité contre les imposteurs qui s'approprient l'image d'Anonymous.">
+    <meta property="og:image" content="https://trhacknon-dev.replit.app/rmask.svg">
+    <meta property="og:url" content="https://trhacknon-dev.replit.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ne touches pas à mon mask">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ne touches pas à mon mask">
+    <meta name="twitter:description" content="Découvrez le véritable rôle des hackers à travers les chapeaux Red Hat, Black Hat, et Grey Hat. Protégez notre identité contre les imposteurs qui s'approprient l'image d'Anonymous.">
+    <meta name="twitter:image" content="https://trhacknon-dev.replit.app/rmask.svg">
+    <meta name="twitter:url" content="https://trhacknon-dev.replit.app">
+    <meta name="twitter:site" content="@trhacknon"> <!-- Remplacez par votre compte Twitter si applicable -->
+    <meta name="twitter:creator" content="@trhacknon"> <!-- Remplacez par votre compte Twitter si applicable -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Favicon -->
+
+    <!-- Préchargement des ressources -->
+    <link rel="preconnect" href="https://trhacknon-dev.replit.app">
+    <link rel="dns-prefetch" href="https://trhacknon-dev.replit.app">
+    <link rel="preload" href="mask.css" as="style">
+    <link rel="preload" href="hat.css" as="style">
+    <link rel="preload" href="hat.js" as="script">
+
+    <!-- Autres meta tags -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Ne touches pas à mon mask">
+    <meta name="application-name" content="Ne touches pas à mon mask">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="robots" content="noarchive">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="mask.css">
+    <link rel="stylesheet" href="hat.css">
+
+    <!-- Inline Styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden; /* Éviter les barres de défilement horizontales */
+            overflow-y: auto; /* Assurer que le défilement vertical est disponible */
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            fill: #ff0000; /* Couleur rouge */
+            text-anchor: middle;
+            dominant-baseline: middle; /* Centre verticalement */
+        }
+
+        .alert-text {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #ff0000; /* Couleur d'alerte */
+        }
+
+        .masks {
+            margin-top: 30px;
+        }
+
+        .hat {
+            margin: 10px 0;
+        }
+
+        .hat.red-hat {
+            color: #ff0000;
+        }
+
+        .hat.black-hat {
+            color: #000000;
+        }
+
+        .hat.grey-hat {
+            color: #808080;
+        }
+
+        .conclusion {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .warning {
+            margin-top: 30px;
+            background-color: #ff0000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .warning-text {
+            color: black;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .warning-subtext {
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        #hat-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Permet de cliquer à travers les chapeaux qui tombent */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NE TOUCHES PAS À MON MASK</h1>
+
+        <img src="rmask.svg" alt="Image" width="200" height="200">
+        <p class="alert-text">
+            Stop aux faux Anonymous qui ne travaillent que pour l'argent et le gain personnel !
+        </p>
+        <div class="masks">
+            <p class="mask-text">Protégeons notre véritable identité</p>
+            <ul class="hats">
+                <li class="hat red-hat">Red Hat : Ce sont les experts en sécurité offensive. Ils ne font pas que repérer les failles, ils combattent activement les cyberattaques en s'en prenant aux hackers malveillants pour protéger les systèmes et les personnes vulnérables.</li>
+                <li class="hat black-hat">Black Hat : Les hackers qui exploitent les vulnérabilités pour leur profit personnel, souvent illégalement. Mais même au sein de cette communauté, certains respectent des codes éthiques et jouent un rôle crucial dans l'équilibre des forces.</li>
+                <li class="hat grey-hat">Grey Hat : Ni complètement éthiques ni totalement malveillants, ces hackers explorent les failles sans l'autorisation des propriétaires des systèmes, mais souvent dans le but de révéler des faiblesses avant qu'elles ne soient exploitées par les criminels.</li>
+            </ul>
+            <p class="conclusion">
+                Chaque "hat" a sa place et son rôle dans l'écosystème du hacking. Ensemble, ils permettent de maintenir un certain équilibre entre protection, éthique et responsabilisation.
+                Mais lorsque des imposteurs ou des personnes motivées uniquement par l'argent s'approprient l'image d'Anonymous, cela nuit à la cause collective.
+            </p>
+        </div>
+
+        <!-- Nouvelle section : Touches pas à mon masque -->
+        <div class="warning">
+            <p class="warning-text">TOUCHES PAS À MON MASQUE</p>
+            <p class="warning-subtext">Ne joue pas avec mes *ouilles</p>
+        </div>
+    </div>
+    <div id="hat-rain"></div>
+
+    <script src="hat.js"></script>
+</body>
+</html>
